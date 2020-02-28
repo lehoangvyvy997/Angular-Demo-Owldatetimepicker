@@ -1,8 +1,8 @@
-ng add @angular/material
+## ng add @angular/material
 ? Choose a prebuilt theme name, or "custom" for a custom theme: Indigo/Pink
 ? Set up HammerJS for gesture recognition? No
 ? Set up browser animations for Angular Material? Yes
-npm install ng-pick-datetime
+## npm install ng-pick-datetime
 # OwlExamples
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
