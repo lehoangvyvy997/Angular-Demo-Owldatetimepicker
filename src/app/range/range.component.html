@@ -1,0 +1,39 @@
+<div class="example-wrapper">
+    <h2>Range Selection</h2>
+
+    <label class="example-input-wrapper">
+        Date Time:
+        <input placeholder="Date Time Range:"
+               [style.width]="'350px'"
+               [(ngModel)]="dateTimeRange"
+               [selectMode]="'range'"
+               [owlDateTimeTrigger]="dtRange1" [owlDateTime]="dtRange1">
+        <owl-date-time #dtRange1></owl-date-time>
+    </label>
+
+    <h4>Value From Picker: {{dateTimeRange}}</h4>
+</div>
+
+<div class="example-wrapper">
+    <h2>RangeFrom & RangeTo Selection</h2>
+
+    <label class="example-input-wrapper">
+        Date Time Range From:
+        <input placeholder="Date Time Range From:"
+               [(ngModel)]="dateTimeRange"
+               [selectMode]="'rangeFrom'"
+               [owlDateTimeTrigger]="dtRange2" [owlDateTime]="dtRange2">
+        <owl-date-time #dtRange2></owl-date-time>
+    </label>
+
+    <label class="example-input-wrapper">
+        Date Time Range To:
+        <input placeholder="Date Time Range To:"
+               [(ngModel)]="dateTimeRange"
+               [selectMode]="'rangeTo'"
+               [owlDateTimeTrigger]="dtRange3" [owlDateTime]="dtRange3">
+        <owl-date-time #dtRange3></owl-date-time>
+    </label>
+
+    <h4>Value From Picker: {{dateTimeRange}}</h4>
+</div>

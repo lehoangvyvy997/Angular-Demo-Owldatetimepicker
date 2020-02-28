@@ -1,0 +1,9 @@
+<p>
+reacive works!
+</p>
+
+<form [formGroup] = "TestForm">
+  <input type="text" [owlDateTimeTrigger]="dt" [owlDateTime]="dt" formControlName="date" placeholder="Enter Date"/>
+  <owl-date-time #dt></owl-date-time>
+
+</form>

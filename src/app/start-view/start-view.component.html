@@ -1,0 +1,31 @@
+<div class="example-wrapper">
+    <h2>Setting the Calendar Start View</h2>
+
+    <label class="example-input-wrapper">
+        Date Time (choose year when picker open):
+        <input placeholder="Date Time:"
+               [(ngModel)]="dateTime"
+               [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1">
+        <owl-date-time [pickerType]="'calendar'"
+                       [startView]="'multi-years'" #dt1></owl-date-time>
+    </label>
+
+    <label class="example-input-wrapper">
+        Date Time (choose month when picker open):
+        <input placeholder="Date Time:"
+               [(ngModel)]="dateTime"
+               [owlDateTimeTrigger]="dt2" [owlDateTime]="dt2">
+        <owl-date-time [pickerType]="'calendar'"
+                       [startView]="'year'" #dt2></owl-date-time>
+    </label>
+
+    <label class="example-input-wrapper">
+        Date Time (picker starts at specific moment):
+        <input placeholder="Date Time:"
+               [(ngModel)]="dateTime"
+               [owlDateTimeTrigger]="dt3" [owlDateTime]="dt3">
+        <owl-date-time [startAt]="startMoment" #dt3></owl-date-time>
+    </label>
+
+    <h4>Value From Picker: {{dateTime}}</h4>
+</div>

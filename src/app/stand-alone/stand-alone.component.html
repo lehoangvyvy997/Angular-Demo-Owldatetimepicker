@@ -1,0 +1,34 @@
+<div class="example-wrapper">
+    <h2>Calendar Only</h2>
+
+    <label class="example-input-wrapper">
+        Date:
+        <input placeholder="Date:"
+               [(ngModel)]="dateTime1"
+               [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1">
+        <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time>
+    </label>
+
+    <h4>Value From Picker: {{dateTime1}}</h4>
+</div>
+
+<div class="example-wrapper">
+    <h2>Timer Only</h2>
+
+    <label class="example-input-wrapper">
+        Time:
+        <input placeholder="Time:"
+               [(ngModel)]="dateTime2"
+               [owlDateTimeTrigger]="dt2" [owlDateTime]="dt2">
+        <owl-date-time [pickerType]="'timer'" #dt2></owl-date-time>
+    </label>
+
+    <h4>Value From Picker: {{dateTime2}}</h4>
+</div>
+
+<div class="example-wrapper">
+    <h2>Picker as Inline Element</h2>
+
+    <owl-date-time-inline [(ngModel)]="dateTime3"></owl-date-time-inline>
+    <h4>Value From Picker: {{dateTime3}}</h4>
+</div>

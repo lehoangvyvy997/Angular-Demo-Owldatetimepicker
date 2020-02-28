@@ -1,0 +1,39 @@
+<div class="example-wrapper">
+    <h2>Basic</h2>
+
+    <label class="example-input-wrapper">
+        Date Time:
+        <input placeholder="Date Time:"
+               [(ngModel)]="dateTime"
+               [owlDateTimeTrigger]="dt" [owlDateTime]="dt">
+        <owl-date-time #dt></owl-date-time>
+    </label>
+
+    <h4>Value From Picker: {{dateTime}}</h4>
+</div>
+
+<div class="example-wrapper">
+    <h2>Trigger Picker by a Icon</h2>
+    <label class="example-input-wrapper">
+        Date Time
+        <input placeholder="Date Time:" [(ngModel)]="dateTime" [owlDateTime]="dt2">
+        <span class="example-trigger" [owlDateTimeTrigger]="dt2">
+            <i class="fas fa-calendar-alt"></i>
+        </span>
+        <owl-date-time #dt2></owl-date-time>
+    </label>
+
+    <h4>Value From Picker: {{dateTime}}</h4>
+</div>
+
+<div class="example-wrapper">
+    <h2>Open a Picker as a Dialog</h2>
+    <label class="example-input-wrapper">
+        Date Time
+        <input placeholder="Date Time:" [(ngModel)]="dateTime"
+               [owlDateTime]="dt3" [owlDateTimeTrigger]="dt3">
+        <owl-date-time [pickerMode]="'dialog'" #dt3></owl-date-time>
+    </label>
+
+    <h4>Value From Picker: {{dateTime}}</h4>
+</div>

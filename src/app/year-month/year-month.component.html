@@ -1,0 +1,18 @@
+<div class="example-wrapper">
+    <h2>Select Year or Month Only</h2>
+
+    <label class="example-input-wrapper">
+        Year Month Only:
+        <input placeholder="Year Month:"
+               [owlDateTimeTrigger]="dt"
+               [owlDateTime]="dt"
+               [formControl]="dateTime">
+        <owl-date-time [pickerType]="'calendar'"
+                       [startView]="'multi-years'"
+                       (yearSelected)="chosenYearHandler($event)"
+                       (monthSelected)="chosenMonthHandler($event, dt)"
+                       #dt="owlDateTime"></owl-date-time>
+    </label>
+
+    <h4>Value From Picker: {{dateTime.value}}</h4>
+</div>

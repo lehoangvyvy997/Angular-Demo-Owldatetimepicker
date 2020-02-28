@@ -1,0 +1,29 @@
+<div class="example-wrapper">
+    <h2>Min and Max Restriction</h2>
+
+    <label class="example-input-wrapper">
+        Date Time:
+        <input placeholder="Date Time:"
+               [(ngModel)]="dateTime1"
+               [min]="min" [max]="max"
+               [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1">
+        <owl-date-time [startAt]="startAt" #dt1></owl-date-time>
+    </label>
+
+    <h4>Value From Picker: {{dateTime1}}</h4>
+</div>
+
+<div class="example-wrapper">
+    <h2>Filter Restriction</h2>
+
+    <label class="example-input-wrapper">
+        Date Time:
+        <input placeholder="Date Time:"
+               [(ngModel)]="dateTime2"
+               [owlDateTimeFilter]="myFilter"
+               [owlDateTimeTrigger]="dt2" [owlDateTime]="dt2">
+        <owl-date-time [startAt]="startAt" #dt2></owl-date-time>
+    </label>
+
+    <h4>Value From Picker: {{dateTime2}}</h4>
+</div>

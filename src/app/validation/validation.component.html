@@ -1,0 +1,70 @@
+<div class="example-wrapper">
+    <h2>Min and Max Validation</h2>
+
+    <label class="example-input-wrapper">
+        Date Time:
+        <input placeholder="Date Time:"
+               [(ngModel)]="invalidDateTime1"
+               [min]="min" [max]="max"
+               [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1"
+               #dateTime1="ngModel">
+        <owl-date-time #dt1></owl-date-time>
+        <span class="example-error" *ngIf="dateTime1.invalid && dateTime1.errors.owlDateTimeMin">
+            Date Time value must after {{min | date: 'medium'}}
+        </span>
+        <span class="example-error" *ngIf="dateTime1.invalid && dateTime1.errors.owlDateTimeMax">
+            Date Time value must before {{max | date: 'medium'}}
+        </span>
+    </label>
+</div>
+
+<div class="example-wrapper">
+    <h2>Filter Validation</h2>
+
+    <label class="example-input-wrapper">
+        Date Time:
+        <input placeholder="Date Time:"
+               [(ngModel)]="invalidDateTime2"
+               [owlDateTimeFilter]="myFilter"
+               [owlDateTimeTrigger]="dt2" [owlDateTime]="dt2"
+               #dateTime2="ngModel">
+        <owl-date-time #dt2></owl-date-time>
+        <span class="example-error" *ngIf="dateTime2.invalid && dateTime2.errors.owlDateTimeFilter">
+            Date Time value must not be Saturday or Sunday
+        </span>
+    </label>
+</div>
+
+<div class="example-wrapper">
+    <h2>Parse Validation</h2>
+
+    <label class="example-input-wrapper">
+        Date Time:
+        <input placeholder="Date Time:"
+               [(ngModel)]="invalidDateTime3"
+               [owlDateTimeTrigger]="dt3" [owlDateTime]="dt3"
+               #dateTime3="ngModel">
+        <owl-date-time #dt3></owl-date-time>
+        <span class="example-error" *ngIf="dateTime3.invalid && dateTime3.errors.owlDateTimeParse">
+            Date Time value invalid.
+        </span>
+    </label>
+</div>
+
+<div class="example-wrapper">
+    <h2>Range Validation</h2>
+
+    <label class="example-input-wrapper">
+        Date Time:
+        <input placeholder="Date Time:"
+               [style.width]="'350px'"
+               [(ngModel)]="invalidDateTime4"
+               [selectMode]="'range'"
+               [owlDateTimeTrigger]="dt4" [owlDateTime]="dt4"
+               #dateTime4="ngModel">
+        <owl-date-time #dt4></owl-date-time>
+        <span class="example-error" *ngIf="dateTime4.invalid && dateTime4.errors.owlDateTimeRange">
+            Date Time Range Invalid.
+        </span>
+    </label>
+</div>

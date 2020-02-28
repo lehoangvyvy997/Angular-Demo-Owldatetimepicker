@@ -1,0 +1,13 @@
+<div class="example-wrapper">
+    <h2>Picker with MomentJS</h2>
+
+    <label class="example-input-wrapper">
+        Date Time:
+        <input placeholder="Date Time:"
+               [(ngModel)]="dateTime"
+               [owlDateTimeTrigger]="dt" [owlDateTime]="dt">
+        <owl-date-time #dt></owl-date-time>
+    </label>
+
+    <h4>Value From Picker: {{dateTime}}</h4>
+</div>
